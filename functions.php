@@ -49,7 +49,7 @@ add_action('wp_enqueue_scripts', 'lpe_enqueue_styles');
  * Enqueue scripts
  */
 function lpe_enqueue_scripts() {
-    wp_enqueue_script('lpe-script', get_template_directory_uri() . '/assets/js/main.js', array(), wp_get_theme()->get('Version'), true);
+    wp_enqueue_script('lpe-script', get_template_directory_uri() . '/js/main.js', array(), wp_get_theme()->get('Version'), true);
     
     // Localize script for admin AJAX
     wp_localize_script('lpe-script', 'lpeAjax', array(
@@ -96,7 +96,7 @@ add_filter('excerpt_length', 'lpe_excerpt_length');
  * Custom excerpt ellipsis
  */
 function lpe_excerpt_more($more) {
-    return ' ...'
+    return ' ...';
 }
 add_filter('excerpt_more', 'lpe_excerpt_more');
 
